@@ -1,7 +1,7 @@
 /* CSS Variables */
 :root {
   --white: hsl(0, 100%, 100%);
-  --spanish-gray: hsl(0, 0%, 60%);
+  --spanish-gray: #A9AD9B;
   --sonic-silver: hsl(0, 0%, 47%);
   --eerie-black: hsl(0, 0%, 13%);
   --davys-gray: hsl(0, 0%, 33%);
@@ -9,10 +9,9 @@
   --white: hsl(0, 100%, 100%);
   --onyx: hsl(0, 0%, 27%);
   --mint: hsl(165, 100%, 40%);
-  --folly: hsl(343, 100%, 53%);
-  --princeton-orange: hsl(36, 100%, 49%);
-  --federal-blue: hsl(245, 100%, 15%);
-
+  --folly: #FF4848;
+  --princeton-blue: #005257;
+  --federal-green: #98ce00;
 
   /* typography */
 
@@ -92,6 +91,45 @@ html {
   font-family: var(--ff-inter);
   overscroll-behavior: contain;
   scroll-behavior: smooth;
+}
+
+/* REUSED STYLES */
+.container {
+  padding: 0 15px;
+}
+
+.has-scrollbar {
+  padding-bottom: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: 3px solid var(--white);
+  border-radius: 20px;
+}
+
+.has-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 90%);
+}
+
+.has-scrollbar:hover::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 80%);
+}
+
+.title {
+  color: var(--eerie-black);
+  font-size: var(--fs-5);
+  font-weight: var(--weight-600);
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--cultured);
+  margin-bottom: 30px;
 }
 
 /* OVERLAY */
@@ -194,7 +232,7 @@ html {
   font-size: var(--font-size-5);
   padding: 5px;
   border-radius: var(--border-radius-sm);
-  background-color: var(--federal-blue);
+  background-color: var(--federal-green);
 }
 
 .modal-close-btn:hover {
@@ -218,11 +256,11 @@ html {
   font-size: var(--font-size-2);
   font-weight: var(--font-weight-600);
   margin-bottom: 10px;
-  color: var(--onyx) ;
+  color: var(--onyx);
 }
 
 .newsletter-desc {
-  color: var(--sonic-silver) ;
+  color: var(--sonic-silver);
   font-size: var(--font-size-7);
   line-height: 1.6;
 }
@@ -248,7 +286,7 @@ html {
 }
 
 .btn-newsletter:hover {
-  background-color: var(--federal-blue) ;
+  background-color: var(--federal-green);
 }
 
 /* NOTIFICATION TOAST */
