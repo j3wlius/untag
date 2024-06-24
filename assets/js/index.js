@@ -47,7 +47,7 @@ for (let i = 0; i < mobileMenuOpenBtn.length; i++) {
 
 // accordion menu variables
 const accordionBtn = document.querySelectorAll(".accordion-menu");
-const accordionMenu = document.querySelectorAll(".submenu-category-list");
+const accordion = document.querySelectorAll(".submenu-category-list");
 
 for (let i = 0; i < accordionBtn.length; i++) {
 	accordionBtn[i].addEventListener("click", function () {
