@@ -49,20 +49,4 @@ for (let i = 0; i < mobileMenuOpenBtn.length; i++) {
 const accordionBtn = document.querySelectorAll(".accordion-menu");
 const accordionMenu = document.querySelectorAll(".submenu-category-list");
 
-for (let i = 0; i < accordionBtn.length; i++) {
-	accordionBtn[i].addEventListener("click", () => {
-		const clickedBtn = this.nextElementSibling.classList.contains("active");
 
-		for (let i = 0; i < accordionMenu.length; i++) {
-			if (clickedBtn) break;
-
-			if (accordionMenu[i].classList.contains("active")) {
-				accordionMenu[i].classList.remove("active");
-				accordionBtn[i].classList.remove("active");
-			}
-		}
-
-		this.nextElementSibling.classList.toggle("active");
-		this.classList.toggle("active");
-	});
-}
